@@ -1,0 +1,326 @@
+1 gyárüzem, szervíz, raktár
+	- Vezeték nélküli hálózat
+	- A mesterek távolról érik el a tervrajzokat, fájlokat
+	- A tervezők feltöltik a terveiket
+	- 30 dolgozónak wireless eszköz
+	- 2 műszakvezető admin PC-vel
+	- AP raktárba és üzembe
+	- IoT RFID kártya beléptetés
+	- 5 raktáros, 5 PDA
+1 iroda:
+	-Telepvezető - 1PC
+	-Management - 4PC
+	-Marketing - 2-3db
+	-Könyvelő - 1db
+	-Designer és mérnökség - 4db
+
+1 hivatásos kereskedelmi szaküzlet:
+	- Kártyaolvasó bankkártyához
+	- Lézernyomda
+	- PC
+
+1 felhőszolgáltatás bérlés
+	- IaaS
+	linux:
+		­ Apache (HTTP)
+		­ Samba, Webdav (file)
+		- (PHP server)
+		­ (Automatizált mentés)
+	windows:
+		­ Címtár (pl. Active Directory)
+		­ DHCP cluster
+		­ DNS
+		- SQL cluster
+		­ Kliens számítógépekre automatizált szoftvertelepítés
+		- Automatizált mentés
+		- Nyomtató megosztás
+		
+	-web: cég és szerver
+----------------------------------------------------------------------------------------------------------
+Név:
+
+	- migazzi
+
+    18. században épült a dóm
+
+----------------------------------------------------------------------------------------------------------
+
+Feladatmegosztás:
+- Váradi:
+	- VLAN kialakítás 
+	- Második és harmadik rétegbeli redundancia 
+	- IPv4 és IPv6 címzési rendszer 
+	- Vezeték nélküli hálózati megoldás 
+	- Statikus és dinamikus forgalomirányítás 
+	- Statikus és dinamikus címfordítás 
+	- WAN-összeköttetések 
+	- Virtuális magánhálózati kapcsolat (VPN) 
+	- Programozott hálózatkonfigurációs megoldás 
+	- Forgalomirányítón megvalósított biztonsági funkciók 
+- Csutak:
+	- Linux:
+		­ HTTP/HTTPS
+		­ FTP
+		­ Automatizált mentés
+	- IoT
+- Utli:
+	- Windows:
+		­ Címtár (pl. Active Directory)
+		­ DHCP
+		­ DNS
+		- SQL cluster
+		­ Kliens számítógépekre automatizált szoftvertelepítés
+		- Nyomtató megosztás
+	- Hálózati topológia tervezése
+	- Network Controller
+	- Harveres tűzfal
+- Közös:
+	- Tesztelés
+	- Dokumentálás
+
+
+
+
+
+
+----------------------------------------------------------------------------------------------------------
+
+Windows Group policy beállítások:
+1. Password and Account Lockout Policies
+
+Enforce Strong Passwords:
+Set a minimum password length (e.g., 12-16 characters), require complexity (uppercase, lowercase, numbers, special characters), and specify expiration (e.g., 60-90 days).
+
+GPO Path: Computer Configuration > Policies > Windows Settings > Security Settings > Account Policies > Password Policy
+
+Recommended settings:
+
+Minimum password length: 14 characters
+
+Passwords must meet complexity requirements: Enabled
+
+Maximum password age: 60–90 days
+
+Minimum password age: 1–3 days
+
+Enforce password history: 24 passwords remembered
+
+Account Lockout Policy:
+Set thresholds for failed login attempts to prevent brute force attacks.
+
+GPO Path: Computer Configuration > Policies > Windows Settings > Security Settings > Account Policies > Account Lockout Policy
+
+Recommended settings:
+
+Account lockout threshold: 5 attempts
+
+Reset account lockout counter after: 15 minutes
+
+Account lockout duration: 30 minutes
+
+2. User Rights Assignment
+
+Restrict Local Administrator Rights:
+Limit the number of users who have local administrator rights. Ensure only necessary staff have elevated privileges to avoid privilege escalation.
+
+GPO Path: Computer Configuration > Policies > Windows Settings > Security Settings > Local Policies > User Rights Assignment
+
+Recommended settings:
+
+Deny logon locally: Administrators, Guests
+
+Deny logon through Remote Desktop Services: Local Administrators
+
+Log on as a service: Network Service, Local Service
+
+Restrict Remote Desktop Access:
+Only authorized users should be able to access remote desktop sessions.
+
+GPO Path: Computer Configuration > Policies > Administrative Templates > Windows Components > Remote Desktop Services > Remote Desktop Session Host > Connections
+
+Recommended settings:
+
+Limit number of RDS connections: 2 or a higher value depending on the environment
+
+Set rules for who can access RDS
+
+3. Audit Policies
+
+Enable Auditing:
+Configure auditing to track login events, group membership changes, privilege use, and object access.
+
+GPO Path: Computer Configuration > Policies > Windows Settings > Security Settings > Advanced Audit Policy Configuration
+
+Recommended settings:
+
+Logon/Logoff: Success and Failure
+
+Account Logon: Success and Failure
+
+Account Management: Success and Failure
+
+Logon/Logoff > Special Logon: Success and Failure
+
+Detailed Tracking: Success and Failure
+
+4. Software Restriction Policies (SRP) / Application Control
+
+Restrict Unauthorized Software:
+Implement Software Restriction Policies or AppLocker to block unauthorized applications from running, especially executables from user directories or unknown sources.
+
+GPO Path: Computer Configuration > Policies > Windows Settings > Security Settings > Software Restriction Policies
+
+Recommended settings:
+
+Define trusted paths (e.g., Program Files, Windows directory)
+
+Deny executables in user-writable directories
+
+Implement AppLocker rules (more granular control than SRP)
+
+5. Windows Defender Antivirus Settings
+
+Configure Antivirus Settings:
+Ensure that Windows Defender (or another antivirus solution) is enabled and regularly updated to provide real-time protection.
+
+GPO Path: Computer Configuration > Administrative Templates > Windows Components > Microsoft Defender Antivirus
+
+Recommended settings:
+
+Turn on Real-time Protection: Enabled
+
+Turn on Cloud-delivered Protection: Enabled
+
+Turn on Tamper Protection: Enabled
+
+Configure scan schedules to run at least weekly
+
+6. BitLocker Encryption
+
+Enforce Full Disk Encryption:
+Set up BitLocker to protect sensitive data on company laptops and desktop systems.
+
+GPO Path: Computer Configuration > Administrative Templates > Windows Components > BitLocker Drive Encryption
+
+Recommended settings:
+
+Require additional authentication at startup: Enabled
+
+Configure BitLocker for operating system drives: Enabled
+
+Set the recovery key backup to Active Directory
+
+7. Windows Update and Patch Management
+
+Automate Windows Updates:
+Ensure all systems receive critical updates and patches regularly. Configure update installation and restart behavior.
+
+GPO Path: Computer Configuration > Administrative Templates > Windows Components > Windows Update
+
+Recommended settings:
+
+Configure automatic updates: Enabled (Auto download and schedule the installation)
+
+Set auto-restart notifications: Enabled
+
+No auto-restart with logged-on users for scheduled automatic updates installations: Enabled
+
+8. User Configuration
+
+Folder Redirection:
+Use Folder Redirection to store user data in network locations, preventing loss of data and allowing for better backups.
+
+GPO Path: User Configuration > Policies > Windows Settings > Folder Redirection
+
+Recommended settings:
+
+Redirect Documents, Desktop, and AppData to network locations
+
+Control Desktop Settings:
+Lock down the desktop environment to prevent users from making changes.
+
+GPO Path: User Configuration > Administrative Templates > Desktop
+
+Recommended settings:
+
+Disable Control Panel: Enabled (or configure selectively)
+
+Disable Task Manager: Enabled (in high-security environments)
+
+9. Network Security and Firewall Settings
+
+Configure Windows Firewall Rules:
+Set rules to block unneeded inbound/outbound traffic and restrict access to trusted applications.
+
+GPO Path: Computer Configuration > Policies > Windows Settings > Security Settings > Windows Defender Firewall
+
+Recommended settings:
+
+Configure inbound and outbound rules to block non-essential traffic
+
+Ensure "Allow ICMP" is configured correctly to avoid potential misuse
+
+10. Time Zone and NTP Synchronization
+
+Ensure Time Synchronization:
+Use a reliable NTP server to synchronize system clocks to prevent issues with time-based security mechanisms (e.g., Kerberos authentication).
+
+GPO Path: Computer Configuration > Administrative Templates > System > Windows Time Service
+
+Recommended settings:
+
+Configure NTP client settings
+
+Configure time zone settings
+
+11. Group Policy Caching (for laptops)
+
+Enable Offline Group Policy Caching:
+Ensure that laptops and remote devices still receive the most up-to-date GPO settings even when disconnected from the network.
+
+GPO Path: Computer Configuration > Administrative Templates > System > Group Policy
+
+Recommended settings:
+
+Enable Group Policy Caching: Enabled
+
+12. Security Options
+
+Configure Security Options:
+Tighten system security by disabling unnecessary features and ensuring that the system is secure by default.
+
+GPO Path: Computer Configuration > Policies > Windows Settings > Security Settings > Local Policies > Security Options
+
+Recommended settings:
+
+Accounts: Limit local accounts use of blank passwords to console logon only: Enabled
+
+Accounts: Administrator account status: Disabled
+
+Accounts: Guest account status: Disabled
+
+Accounts: Limit number of logon attempts: Enabled
+
+User Account Control: Run all administrators in Admin Approval Mode: Enabled
+
+13. User Profile Settings
+
+Configure Roaming Profiles or UE-V (User Experience Virtualization):
+Ensure that user profiles are consistent across devices, whether users are on their desktops or laptops.
+
+GPO Path: User Configuration > Policies > Administrative Templates > System > User Profiles
+
+Recommended settings:
+
+Set up roaming profiles or UE-V to maintain user settings and data consistency across devices
+
+14. TLS and Encryption Settings
+
+Enforce TLS 1.2 or Higher:
+Disable weak protocols like SSL and TLS 1.0 to ensure secure communication.
+
+GPO Path: Computer Configuration > Administrative Templates > Network > SSL Configuration Settings
+
+Recommended settings:
+
+Disable SSL and enable TLS 1.2 or higher
