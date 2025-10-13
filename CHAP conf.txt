@@ -1,0 +1,190 @@
+Building configuration...
+
+Current configuration : 977 bytes
+!
+version 12.2
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname R1
+!
+!
+!
+!
+!
+!
+!
+!
+ip cef
+no ipv6 cef
+!
+!
+!
+username R2 password 0 Cisco
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface FastEthernet0/0
+ ip address 192.168.1.1 255.255.255.0
+ duplex auto
+ speed auto
+!
+interface FastEthernet1/0
+ no ip address
+ duplex auto
+ speed auto
+ shutdown
+!
+interface Serial2/0
+ ip address 1.1.1.1 255.255.255.252
+ encapsulation ppp
+ ppp authentication chap
+ clock rate 2000000
+!
+interface Serial3/0
+ no ip address
+ clock rate 2000000
+ shutdown
+!
+interface FastEthernet4/0
+ no ip address
+ shutdown
+!
+interface FastEthernet5/0
+ no ip address
+ shutdown
+!
+router ospf 1
+ log-adjacency-changes
+ network 0.0.0.0 255.255.255.255 area 0
+ default-information originate
+!
+ip classless
+ip route 192.168.2.0 255.255.255.0 Serial2/0 
+!
+ip flow-export version 9
+!
+!
+!
+!
+!
+!
+!
+!
+line con 0
+!
+line aux 0
+!
+line vty 0 4
+ login
+!
+!
+!
+end
+
+
+
+
+Current configuration : 847 bytes
+!
+version 12.2
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname R2
+!
+!
+!
+!
+!
+!
+!
+!
+ip cef
+no ipv6 cef
+!
+!
+!
+username R1 password 0 Cisco
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface FastEthernet0/0
+ ip address 192.168.2.1 255.255.255.0
+ duplex auto
+ speed auto
+!
+interface FastEthernet1/0
+ no ip address
+ duplex auto
+ speed auto
+ shutdown
+!
+interface Serial2/0
+ ip address 1.1.1.2 255.255.255.252
+ encapsulation ppp
+ ppp authentication chap
+!
+interface Serial3/0
+ no ip address
+ clock rate 2000000
+ shutdown
+!
+interface FastEthernet4/0
+ no ip address
+ shutdown
+!
+interface FastEthernet5/0
+ no ip address
+ shutdown
+!
+ip classless
+ip route 192.168.1.0 255.255.255.0 Serial2/0 
+!
+ip flow-export version 9
+!
+!
+!
+!
+!
+!
+!
+!
+line con 0
+!
+line aux 0
+!
+line vty 0 4
+ login
+!
+!
+!
+end
