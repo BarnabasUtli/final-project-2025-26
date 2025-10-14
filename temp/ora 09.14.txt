@@ -60,13 +60,13 @@ Feladatmegosztás:
 - Csutak:
 	- Linux:
 		­ HTTP/HTTPS
-		­ FTP
+		­ DHCP
 		­ Automatizált mentés
 	- IoT
 - Utli:
 	- Windows:
 		­ Címtár (pl. Active Directory)
-		­ DHCP
+		­ Fájlmegosztás
 		­ DNS
 		- SQL cluster
 		­ Kliens számítógépekre automatizált szoftvertelepítés
@@ -322,5 +322,6 @@ Disable weak protocols like SSL and TLS 1.0 to ensure secure communication.
 GPO Path: Computer Configuration > Administrative Templates > Network > SSL Configuration Settings
 
 Recommended settings:
+
 
 Disable SSL and enable TLS 1.2 or higher
