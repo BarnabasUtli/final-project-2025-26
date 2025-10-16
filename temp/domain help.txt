@@ -1,5 +1,5 @@
-Public website	chronovate.com	www.chronovate.com
-AD domain	ad.chronovate.com	dc01.ad.chronovate.com
-Servers	fs01.ad.chronovate.com, dc01.ad.chronovate.com	
-Users	firstname.lastname@ad.chronovate.com (internal login)	
-Email (public)	firstname.lastname@chronovate.com (different)
+Public website	migazzi.com	www.migazzi.com
+AD domain	corp.migazzi.com	dc01.corp.migazzi.com
+Servers	fs01.corp.migazzi.com, dc01.corp.migazzi.com	
+Users	firstname.lastname@corp.migazzi.com (internal login)	
+Email (public)	firstname.lastname@migazzi.com (different)
