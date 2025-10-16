@@ -29,3 +29,5 @@ corp.migazzi.com
 │   └── Departmental
 │
 └── ServiceAccounts
+
+https://activedirectorypro.com/create-bulk-organizational-units-ou-in-active-directory-with-powershell/
