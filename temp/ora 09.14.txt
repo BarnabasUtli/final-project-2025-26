@@ -61,7 +61,7 @@ Feladatmegosztás:
 	- Linux:
 		­ HTTP/HTTPS
 		­ DHCP
-		­ Automatizált mentés
+		­ Automatizált mentés - WebDav
 	- IoT
 - Utli:
 	- Windows:
@@ -325,3 +325,4 @@ Recommended settings:
 
 
 Disable SSL and enable TLS 1.2 or higher
+
