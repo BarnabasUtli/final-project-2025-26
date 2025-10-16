@@ -1,0 +1,17 @@
+Example Group List
+Group Name	Purpose	Members
+Management	All company executives	CEO, CFO, Directors
+HR	HR Department	HR staff
+Finance	Finance + Sales Admin	Accountants, Sales staff
+IT	IT Department	Sysadmins, Helpdesk
+Marketing	Marketing & Design	Marketing team
+Engineering	Engineering	Engineers, Designers
+Sales	Retail Sales	Shop employees
+CustomerService	Retail Customer Service	Service desk staff
+Production	Factory Production	Line supervisors
+Warehouse	Logistics & Warehouse	Inventory staff
+Procurement	Procurement	Buyers, supply coordinators
+Maintenance	Factory maintenance	Technicians
+RnD	Research & Development	Prototype engineers
+AllEmployees	All user accounts	All AD-enabled staff
+VPN_Users	Remote access permission	Remote-capable users (Managers, IT, etc.)

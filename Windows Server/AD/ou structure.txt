@@ -1,0 +1,31 @@
+corp.migazzi.com
+│
+├── HeadOffice
+│   ├── Management
+│   ├── HR
+│   ├── Finance
+│   ├── IT
+│   ├── Marketing
+│   └── Engineering
+│
+├── RetailShop
+│   ├── Sales
+│   └── CustomerService
+│
+├── FactoryWarehouse
+│   ├── Production
+│   ├── Warehouse
+│   ├── Procurement
+│   ├── Maintenance
+│   └── RnD
+│
+├── Servers
+│   ├── DomainControllers
+│   ├── FileServers
+│   ├── AppServers
+│   └── DatabaseServers
+│
+├── Groups
+│   └── Departmental
+│
+└── ServiceAccounts
