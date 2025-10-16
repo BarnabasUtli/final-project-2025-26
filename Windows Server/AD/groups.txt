@@ -1,4 +1,5 @@
-Example Group List
+Group List
+
 Group Name	Purpose	Members
 Management	All company executives	CEO, CFO, Directors
 HR	HR Department	HR staff
@@ -14,4 +15,5 @@ Procurement	Procurement	Buyers, supply coordinators
 Maintenance	Factory maintenance	Technicians
 RnD	Research & Development	Prototype engineers
 AllEmployees	All user accounts	All AD-enabled staff
+
 VPN_Users	Remote access permission	Remote-capable users (Managers, IT, etc.)
