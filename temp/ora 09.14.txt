@@ -23,17 +23,17 @@
 	- IaaS
 	linux:
 		­ Apache (HTTP)
-		­ Samba, Webdav (file)
-		- (PHP server)
+		­ DHCP
+		 (PHP server)
 		­ (Automatizált mentés)
 	windows:
 		­ Címtár (pl. Active Directory)
-		­ DHCP cluster
 		­ DNS
-		- SQL cluster
+		 Fileshare
+		 SQL cluster
 		­ Kliens számítógépekre automatizált szoftvertelepítés
-		- Automatizált mentés
-		- Nyomtató megosztás
+		 Automatizált mentés
+		 Nyomtató megosztás
 		
 	-web: cég és szerver
 ----------------------------------------------------------------------------------------------------------
@@ -325,4 +325,5 @@ Recommended settings:
 
 
 Disable SSL and enable TLS 1.2 or higher
+
 
