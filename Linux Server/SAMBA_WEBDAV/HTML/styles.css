@@ -1,0 +1,354 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-user-drag: none; /* Chrome, Safari */
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Inter', system-ui, sans-serif;
+  background: #0a0a0a;
+  color: #fff;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column; /* Footerhez szükséges */
+}
+
+body {
+  overflow: auto; /* keep scrolling enabled */
+}
+
+/* Hide scrollbar for the whole page */
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
+
+/* Globális particle háttér */
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(6px);
+  z-index: 1000;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+img {
+  user-select: none;        /* Cannot select */
+  -webkit-user-drag: none;  /* Disable dragging in Chrome/Safari */
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  pointer-events: auto;     /* Keeps clicks working if needed */
+}
+
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.nav a {
+  margin-left: 1.5rem;
+  font-weight: 500;
+  color: #fff; /* alapértelmezett fehér */
+  transition: color 0.3s;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 12px;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  cursor: pointer;
+}
+
+
+.nav a:hover {
+  background-image: linear-gradient(180deg, #fdedb7 40%, #221c07 100%); 
+  background-clip: text; 
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Hero szekció */
+.hero {
+  position: relative;
+  padding-top: 80px; /* header magassága */
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  z-index: 1;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Section */
+main {
+  flex: 1 0 auto; /* kitölti a rendelkezésre álló helyet */
+  padding-top: 5rem; /* header magasságához igazítva */
+}
+
+.section {
+  padding: 5rem 0;
+}
+
+.section__title {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  color: #c69c64; 
+  background-image: linear-gradient(180deg, #c69c64 50%, #644f32 100%); 
+  background-clip: text; 
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+}
+
+/* Watches grid */
+.watches__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: rgba(255,255,255,0.05);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  background: rgba(255,255,255,0.1);
+}
+
+.card img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+/* Stores */
+.stores__list {
+  display: grid;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.store {
+  background: rgba(255,255,255,0.05);
+  padding: 1.5rem;
+  border-radius: 12px;
+  transition: background 0.3s;
+}
+
+.store:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+/* Contact form */
+.contact__form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1.2rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.field label {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #d4af37;
+}
+
+.field input,
+.field textarea {
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+}
+
+.field input:focus,
+.field textarea:focus {
+  background: rgba(255,255,255,0.15);
+}
+
+.btn {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  background: #d4af37;
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #bfa132;
+}
+
+/* Footer */
+.footer {
+  background: rgba(0,0,0,0.8);
+  text-align: center;
+  padding: 1.5rem 0;
+  color: #ccc;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .nav a {
+    margin-left: 1rem;
+  }
+}
+
+.history {
+  position: relative;
+  padding: 6rem 0;
+  background: rgba(0,0,0,0.1);
+}
+
+.history__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.3);
+  z-index: 1;
+}
+
+.history__content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #eee;
+}
+
+.history__content p {
+  margin-bottom: 1.8rem;
+}
+
+.history__content p strong {
+  color: #d4af37;
+  font-size: 1.2rem;
+}
+
+.guarantee__content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+
+.guarantee__card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+}
+
+.guarantee__card {
+  background: rgba(255,255,255,0.05);
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.guarantee__card:hover {
+  transform: translateY(-8px);
+  background: rgba(255,255,255,0.1);
+}
+
+.guarantee__card .icon {
+  margin-bottom: 1rem;
+  color: #c69c64; 
+  transition: color 0.3s;
+}
+
+.guarantee__card:hover .icon {
+  color: #806543; 
+}
+
+
+.logol{
+  width: 100px;
+  height: 100px;
+}
+.logon{
+  width: 160px;
+  height: 24px;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Migazzi Órabolt</title>
+  <meta name="description" content="Migazzi órabolt — prémium órák és elegancia.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="particles-js"></div>
+
+
+  <header class="header">
+    <div class="container header__container">
+      <img src="kep/logo.png" alt="logo" class="logol">
+      <img src="kep/nev.png" alt="logo" class="logon">
+      <nav class="nav">
+        <a href="fo.html">Főoldal</a>
+        <a href="watches.html">Órák</a>
+        <a href="guarantee.html">Garancia</a>
+        <a href="stores.html">Boltok</a>
+        <a href="contact.html">Kapcsolat</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div id="tsparticles-hero"></div>
+    <div class="hero__overlay"></div>
+    <div class="container hero__content">
+      <h2>Stílus és időtállóság</h2>
+      <p>Fedezd fel prémium óráinkat</p>
+    </div>
+  </section>
+
+  <main class="section history">
+  <div id="tsparticles-history"></div>
+  <div class="history__overlay"></div>
+  <div class="container">
+    <h2 class="section__title">A Migazzi története</h2>
+    <div class="history__content">
+      <p>A Migazzi név több mint egy óramárka: egy örökség, amely a hagyomány, a mesterségbeli tudás és az időtlen elegancia találkozásából született.</p>
+      <p>A történet gyökerei az 1800-as évek végére nyúlnak vissza, amikor a Migazzi család mesterei először kezdtek kifinomult mechanikákat és díszített szerkezeteket készíteni nemesi megrendelésre. A család szenvedélye az órakészítés iránt generációkon átívelt, minden egyes darabjukban megőrizve a precizitás és a szépség iránti elköteleződést.</p>
+      <p>A 20. század elején a Migazzi név már a kivételes minőség és a részletgazdag kidolgozás szinonimájává vált. A hagyományos kézműves technikák ötvöződtek a modern innovációkkal, így születtek meg azok az órák, amelyek a mai napig a márka szellemiségét képviselik.</p>
+      <p>A Migazzi ma is a luxusóra-gyártás élvonalában áll. Minden egyes modellünket a klasszikus elegancia és a modern formavilág harmóniája jellemzi, legyen szó limitált szériás darabokról, kézzel készített mechanikus szerkezetekről vagy innovatív komplikációkról.</p>
+      <p>Számunkra az idő nem csupán múló percek sora, hanem egy örökség, amelyet viselhetünk. A Migazzi órák azoknak készülnek, akik értékelik a maradandó értékeket, a kifinomultságot és a részletekbe rejtett művészetet.</p>
+      <p><strong>Migazzi – ahol az idő luxussá válik.</strong></p>
+    </div>
+  </div>
+</main>
+
+
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+<script src="scripts.js"></script>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Migazzi Órabolt</p>
+    </div>
+  </footer>
+  <script>
+    // Hero particle háttér
+    tsParticles.load("tsparticles-hero", {
+      background: { color: "transparent" },
+      particles: {
+        number: { value: 60 },
+        color: { value: "#ffffff" },
+        shape: { type: "circle" },
+        opacity: { value: 0.5 },
+        size: { value: 2 },
+        move: { enable: true, speed: 1, direction: "none", outModes: "out" },
+        links: { enable: true, distance: 150, color: "#ffffff", opacity: 0.3 }
+      }
+    });
+
+    // Watches particle háttér
+    tsParticles.load("tsparticles-watches", {
+      background: { color: "transparent" },
+      particles: {
+        number: { value: 80 },
+        color: { value: "#b08a3a" },
+        shape: { type: "circle" },
+        opacity: { value: 0.6 },
+        size: { value: 3 },
+        move: { enable: true, speed: 1, outModes: "out" },
+        links: { enable: true, distance: 120, color: "#b08a3a", opacity: 0.4 }
+      }
+    });
+    tsParticles.load("tsparticles-history", {
+  background: { color: "transparent" },
+  particles: {
+    number: { value: 50 },
+    color: { value: "#ffffff" },
+    shape: { type: "circle" },
+    opacity: { value: 0.3 },
+    size: { value: 2 },
+    move: { enable: true, speed: 0.8, outModes: "out" },
+    links: { enable: true, distance: 100, color: "#ffffff", opacity: 0.2 }
+  }
+});
+
+  </script>
+</body>
+</html>
