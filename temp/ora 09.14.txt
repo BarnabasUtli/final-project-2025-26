@@ -57,6 +57,7 @@ Feladatmegosztás:
 	- Virtuális magánhálózati kapcsolat (VPN) 
 	- Programozott hálózatkonfigurációs megoldás 
 	- Forgalomirányítón megvalósított biztonsági funkciók 
+	- Második, harmadik rétegbeli védelem
 - Csutak:
 	- Linux:
 		­ HTTP/HTTPS
@@ -325,5 +326,6 @@ Recommended settings:
 
 
 Disable SSL and enable TLS 1.2 or higher
+
 
 
