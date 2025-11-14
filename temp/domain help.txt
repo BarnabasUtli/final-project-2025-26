@@ -1,5 +1,5 @@
 Public website	migazzi.com	www.migazzi.com
 AD domain	corp.migazzi.com	dc01.corp.migazzi.com
 Servers	fs01.corp.migazzi.com, dc01.corp.migazzi.com	
-Users	firstname.lastname@corp.migazzi.com (internal login)	
+Users	lastname[firstletteroffirstname]@corp.migazzi.com (internal login)	
 Email (public)	firstname.lastname@migazzi.com (different)

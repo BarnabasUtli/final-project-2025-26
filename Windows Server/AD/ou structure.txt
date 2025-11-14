@@ -20,13 +20,9 @@ corp.migazzi.com
 │   └── RnD
 │
 ├── Servers
-│   ├── DomainControllers
 │   ├── FileServers
 │   ├── AppServers
 │   └── DatabaseServers
-│
-├── Groups
-│   └── Departmental
 │
 └── ServiceAccounts
 

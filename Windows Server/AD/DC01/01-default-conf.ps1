@@ -17,10 +17,10 @@ $NewHostname = "DC01"
 $Adapter = "Ethernet"
 
 # IP Settings
-$IPAddress   = "192.168.20.2"
+$IPAddress   = "192.168.20.4"
 $PrefixLen   = 24     # /24 subnet mask
 $Gateway     = "192.168.20.1"
-$DnsPrimary  = "192.168.20.2"    # AD DNS (self)
+$DnsPrimary  = "192.168.20.4"    # AD DNS (self)
 
 ############################
 # ---- BEGIN CONFIG ---- #

@@ -1,31 +1,20 @@
-<#
-Creates OU structure in Active Directory from CSV input file.
-CSV format:
-ParentOU,OUName
-OU=SomeOU,DC=domain,DC=com,SubOU
-#>
+# Import active directory module for running AD cmdlets
+Import-Module activedirectory
 
-Import-Module ActiveDirectory
+#Store the data from the CSV in the $ADOU variable. 
+$ADOU = Import-csv 'C:\Users\Administrator\Desktop\Windows Server\AD\ou-structure.csv'
 
-$csvPath = "..\ou-structure.csv"
-$ouList = Import-Csv $csvPath
+#Loop through each row containing user details in the CSV file
+foreach ($ou in $ADOU)
+{
+#Read data from each field in each row and assign the data to a variable as below
 
-foreach ($entry in $ouList) {
-    $parentPath = $entry.ParentOU
-    $ouName = $entry.OUName
+$name = $ou.name
+$path = $ou.path
 
-    $ouPath = "OU=$ouName,$parentPath"
+#Account will be created in the OU provided by the $OU variable read from the CSV file
+New-ADOrganizationalUnit `
+-Name $name `
+-path $path `
 
-    if (-not (Get-ADOrganizationalUnit -LDAPFilter "(ou=$ouName)" -SearchBase $parentPath -ErrorAction SilentlyContinue)) {
-        try {
-            New-ADOrganizationalUnit -Name $ouName -Path $parentPath -ProtectedFromAccidentalDeletion $true -ErrorAction Stop
-            Write-Host "[+] Created OU: $ouPath" -ForegroundColor Green
-        }
-        catch {
-            Write-Host "[!] Failed to create OU: $ouPath - $($_.Exception.Message)" -ForegroundColor Red
-        }
-    }
-    else {
-        Write-Host "[-] OU already exists: $ouPath" -ForegroundColor Yellow
-    }
 }
