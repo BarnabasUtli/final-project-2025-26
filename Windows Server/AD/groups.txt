@@ -15,5 +15,3 @@ Procurement	Procurement	Buyers, supply coordinators
 Maintenance	Factory maintenance	Technicians
 RnD	Research & Development	Prototype engineers
 AllEmployees	All user accounts	All AD-enabled staff
-
-VPN_Users	Remote access permission	Remote-capable users (Managers, IT, etc.)

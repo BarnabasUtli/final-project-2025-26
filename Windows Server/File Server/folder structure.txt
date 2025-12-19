@@ -1,0 +1,72 @@
+\\FS01\Migazzi
+│
+├── Management
+│   ├── BoardReports               (Management: Modify)
+│   ├── StrategicPlans             (Management: Modify)
+│   └── ExecutiveTemplates         (Management: Modify)
+│
+├── HR
+│   ├── EmployeeRecords            (HR: Modify)
+│   ├── Payroll                    (HR + Finance: Read)
+│   ├── Recruitment                (HR: Modify)
+│   └── Policies                   (HR + AllEmployees: Read)
+│
+├── Finance
+│   ├── Budgets                    (Finance: Modify)
+│   ├── AccountsPayable            (Finance: Modify)
+│   ├── AccountsReceivable         (Finance + Sales: Read)
+│   └── Reports                    (Finance: Modify, Management: Read)
+│
+├── IT
+│   ├── SysAdminTools              (IT: Modify)
+│   ├── HelpdeskLogs               (IT: Modify)
+│   ├── Documentation              (IT + AllEmployees: Read)
+│   └── Configurations             (IT: Modify)
+│
+├── Marketing
+│   ├── Campaigns                  (Marketing: Modify)
+│   ├── Designs                    (Marketing: Modify)
+│   ├── Assets                     (Marketing + AllEmployees: Read)
+│   └── Reports                    (Marketing + Management: Read)
+│
+├── Engineering
+│   ├── Projects                   (Engineering: Modify)
+│   │   ├── Watches
+│   │   ├── Prototypes
+│   │   └── Drawings
+│   ├── CADFiles                    (Engineering: Modify)
+│   └── Documentation               (Engineering + Management: Read)
+│
+├── Retail
+│   ├── Sales
+│   │   ├── DailyReports            (Sales: Modify)
+│   │   ├── InventorySheets         (Sales + Warehouse: Read)
+│   │   └── Promotions              (Sales + Marketing: Read)
+│   └── CustomerService
+│       ├── Tickets                 (CustomerService: Modify)
+│       └── Feedback                (CustomerService + Management: Read)
+│
+├── Factory
+│   ├── Production
+│   │   ├── Schedules               (Production: Modify)
+│   │   ├── QualityReports          (Production + RnD: Read)
+│   │   └── SOPs                    (Production + Maintenance: Read)
+│   ├── Warehouse
+│   │   ├── Inventory               (Warehouse: Modify)
+│   │   └── Shipping                (Warehouse + Sales: Read)
+│   ├── Procurement
+│   │   ├── Orders                  (Procurement: Modify)
+│   │   └── SupplierDocs            (Procurement: Modify)
+│   ├── Maintenance
+│   │   ├── EquipmentLogs           (Maintenance: Modify)
+│   │   └── Schedules               (Maintenance + Production: Read)
+│   └── RnD
+│       ├── Prototypes              (RnD: Modify)
+│       └── TestReports             (RnD + Engineering: Read)
+│
+├── Shared
+    ├── Templates                    (AllEmployees: Read)
+    ├── Policies                     (AllEmployees: Read)
+    └── Training                     (AllEmployees: Read)
+
+
