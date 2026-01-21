@@ -1,0 +1,4 @@
+ISP:
+Belső Hálózaton 112 interfész van, 56 link
+B-s címeket használok,
+2 link megy minden border router felé
