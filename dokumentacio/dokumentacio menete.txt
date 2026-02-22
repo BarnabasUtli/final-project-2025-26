@@ -1,0 +1,42 @@
+0. Jogi nyilatkozatok (a projektfeladat eredetiségéről)
+
+1. Bemutatás
+-Cég neve
+-Cég bemutatkozása
+-Dolgozók száma (Szakokra, technikusokra lebontva /db)
+-Telephelyek felosztása, magyarázata, alaprajza
+-Kinek mi a szerepe a cégnél
+
+2. Működési feltételek, elvárások
+-Szoftveres, hardveres feltételek, alkalmazások bemutatása, miket használtunk
+-Protokolok rövid ismertetése, miért hesználjuk
+
+3.Fizikai topológia alaprajzzal
+-Minden telephely eszközei, bekötése, költségvetés
+-Kábeltervezés
+-Hálózati infrastruktúra, mit miért hol használunk
+-Összesített költséglista, melyben minden eszköz, kábel, egyéb szerepel
+-Beszerzések forrásai(mármint honnan vesszük)
+
+4. Logikai topológia
+-Minden telephely logikai topológiája, 
+-IPv4, IPv6 címzés, VLAN stb.
+-Biztonsági jelszavak, belépések stb.
+
+5. Szerverek
+Itt Barni és Utli bemutatják a szerverszolgáltatásokat
+
+6. Feladatelosztás
+-Ki mit csinált
+
+7. Ábrajegyzék
+
+8. Tartalomjegyzék
+
+-----------SZÜNET-----------------------
+
+Tesztelési Dokumentáció:
+
+
+Ide tele lehet baszni screenshotokkal, Ctrl C+ Ctrl V
+Ennek tartalomjegyzék
