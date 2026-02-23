@@ -30,6 +30,7 @@
 	4.7 EIGRP
 	4.8 Spanning-Tree
 	4.9 SSH
+	4.10 Switchport security
 5. Felhasznált szerverek
 6. Szerverszolgáltatások
 	6.1 Iroda telephely
