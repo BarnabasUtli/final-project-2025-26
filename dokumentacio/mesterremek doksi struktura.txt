@@ -38,5 +38,8 @@
 	6.3 Szaküzlet telephely
 	6.4 Oceandata telephely
 7. Hálózatprogramozás
-8. Források
-9. Ábrajegyzék
+8. Feladatmegosztás
+9. Források
+10. Ábrajegyzék
+
+Tesztelés?
